@@ -16,24 +16,24 @@ Sigue estos pasos para instalar y configurar el proyecto en tu máquina local:
 
 1. **Clona el repositorio:**
 
-   https://github.com/tu-usuario/tu-repositorio.git
+   https://github.com/Adriel171717/Prueba-Tecnica.git
 
 2. **Configura la base de datos:**
 
-    Abre Laragon y asegúrate de que los servicios de Apache y MySQL estén activos.
-
-    Abre la base de datos de Laragon y crea una base de datos nueva llamada prueba_tecnica.
-
-    Importa el archivo database.sql en la base de datos prueba_tecnica para crear las tablas necesarias (administradores y mensajes).
+  - Abre Laragon y asegúrate de que los servicios de Apache y MySQL estén activos.
+  - Abre la base de datos de Laragon y crea una base de datos nueva llamada prueba_tecnica.
+  - Importa el archivo database.sql en la base de datos prueba_tecnica para crear las tablas necesarias (administradores y mensajes).
 
 3. **Configura la conexión a la base de datos:**
 
     Abre el archivo includes/db.php y asegúrate de que los datos de conexión coincidan con tu configuración de Laragon:
 
-    $host = 'localhost';      // Servidor de la base de datos
-    $dbname = 'prueba_tecnica'; // Nombre de la base de datos
-    $user = 'root';           // Usuario de MySQL (por defecto en Laragon es 'root')
-    $pass = '';               // Contraseña de MySQL (en Laragon, por defecto está vacía)
+```
+    $host = 'localhost';........// Servidor de la base de datos
+    $dbname = 'prueba_tecnica';.// Nombre de la base de datos
+    $user = 'root';.............// Usuario de MySQL (por defecto en Laragon es 'root')
+    $pass = '';................// Contraseña de MySQL (en Laragon, por defecto está vacía)
+```
 
 4. **Coloca el proyecto en la carpeta de Laragon:**
 
@@ -47,24 +47,26 @@ Sigue estos pasos para instalar y configurar el proyecto en tu máquina local:
 
 Aquí hay una breve descripción de la estructura del proyecto:
 
-tu-repositorio/
-├── admin/                  # Archivos de la interfaz de administración
-│   ├── delete_message.php  # Eliminar mensajes
-│   ├── header.php          # Cabecera de la interfaz de administración
-│   ├── index.php           # Lista de mensajes
-│   ├── login.php           # Página de inicio de sesión
-│   ├── logout.php          # Cerrar sesión
-│   ├── mark_as_read.php    # Marcar mensajes como leídos
-│   └── styles.css          # Estilos de la interfaz de administración
-├── assets/                 # Archivos estáticos (CSS, imágenes, JS)
-├── includes/               # Archivos incluidos (conexión a la base de datos, etc.)
-│   ├── db.php              # Conexión a la base de datos
-│   ├── footer.php          # Pie de página
-│   ├── header.php          # Cabecera de la página de lanzamiento
-│   └── contact.php         # Procesamiento del formulario de contacto
-├── database.sql            # Script de la base de datos
-├── index.php               # Página de lanzamiento (landing page)
-└── README.md               # Este archivo
+```
+tu-repositorio/  
+├── admin/..................# Archivos de la interfaz de administración  
+│   ├── delete_message.php..# Eliminar mensajes  
+│   ├── header.php..........# Cabecera de la interfaz de administración  
+│   ├── index.php...........# Lista de mensajes  
+│   ├── login.php...........# Página de inicio de sesión  
+│   ├── logout.php..........# Cerrar sesión  
+│   ├── mark_as_read.php....# Marcar mensajes como leídos  
+│   └── styles.css..........# Estilos de la interfaz de administración  
+├── assets/.................# Archivos estáticos (CSS, imágenes, JS)  
+├── includes/...............# Archivos incluidos (conexión a la base de datos, etc.)  
+│   ├── db.php..............# Conexión a la base de datos  
+│   ├── footer.php..........# Pie de página  
+│   ├── header.php..........# Cabecera de la página de lanzamiento  
+│   └── contact.php.........# Procesamiento del formulario de contacto  
+├── database.sql............# Script de la base de datos  
+├── index.php...............# Página de lanzamiento (landing page)  
+└── README.md...............# Este archivo  
+```
 
 # Gestión de contraseñas de administradores
 
@@ -76,11 +78,13 @@ Para generar y reemplazar una contraseña segura, se tiene que crear un archivo 
 
 1. **Crea el archivo temporal.php:**
 
+```
     <?php
     $password = 'tu_contraseña_aquí'; // Reemplaza con la contraseña que deseas hashear
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
     echo "El hash de la contraseña es: " . $hashed_password;
     ?>
+```
 
 2. **Ejecuta el archivo temporal:**
 
