@@ -1,0 +1,124 @@
+
+/* --------------------------------------- header --------------------------------------- */
+
+/* Estilo del Cursor en el button*/
+.btn-outline-light:hover {
+    font-family: 'Corbel', sans-serif;
+    background-color: white !important;
+    color: #264a5e !important;
+    border-color: white !important;
+    border-radius: 0;
+}
+
+/* Estilo para la línea vertical */
+.border-vertical {
+    width: 1px; /* Ancho de la línea */
+    height: 50px; /* Altura de la línea igual al logo */
+    background-color: #c0c0c0; /* Color de la línea (blanco) */
+}
+
+/* Estilo del texto */
+.DASHBOARD {
+    font-family: 'Corbel', sans-serif;
+    font-size: 20px;
+    color: white;
+    padding-left: 10px;
+}
+
+/* Estilo para el boton Cerrar sesión */
+.buton-logout{
+    font-family: 'Corbel', sans-serif;
+    background-color: #264a5e;
+    color: white;
+    border-color: white;
+    transition: all 0.3s ease;
+    border-radius: 0;
+    font-size: 20px;
+}
+
+/* --------------------------------------- Index --------------------------------------- */
+
+/* Estilos para las tarjetas de mensajes */
+.card {
+    border-color: #264a5e;
+    border-radius: 0;
+    margin-bottom: 20px;
+}
+
+/* Animación para el cursor sobre la tarjeta */
+.card:hover {
+    transform: translateY(-2px);
+    transition: transform 0.2s ease;
+}
+
+/* Estilos de "Mensajes Nuevos" */
+.title1{
+    font-family: 'Constantia', sans-serif;
+    font-weight: bold;
+    color: #264a5e;
+}
+
+/* Linea arriba de "Todos los Mensajes" */
+.linea {
+    border-color: #264a5e !important;
+    border-width: 1px !important;
+    padding: 5px;
+}
+
+/* Estilos de "Todos los Mensajes" */
+.title2{
+    font-family: 'Corbel', sans-serif;
+    font-weight: bold;
+    color: #264a5e;
+}
+
+/* Estilos del 'Nombre' */
+.card-title {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #264a5e;
+    display: inline-block;
+}
+
+/* Estilos del 'correo' */
+.card-subtitle {
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    font-weight: normal;
+    color: #264a5e;
+    display: inline-block;
+}
+
+/* Distribución para icon y 'mensaje' */
+.message-content {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Estilos del 'mensaje' */
+.card-text{
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    font-weight: normal;
+}
+
+/* Distribución para icon ms y icon delete */
+.message-actions {
+    margin-left: auto;
+    display: flex;
+    gap: 8px;
+}
+
+/* Diseño de icon ms */
+.btn-outline-success {
+    font-size: 20px;
+    color: #264a5e;
+}
+
+/* Diseño de icon delete */
+.btn-outline-danger {
+    font-size: 20px;
+    color: red;
+}

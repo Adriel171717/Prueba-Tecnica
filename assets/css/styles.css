@@ -1,0 +1,480 @@
+
+
+
+/* ==================== HEADER ==================== */
+
+
+
+/* Header transparente con color de fondo ligeramente visible */
+#header {
+    background-color: #264a5ecc;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: top 0.3s ease;
+    padding: 10px 0;
+}
+
+/* Linea al lado de la imagen */
+.vertical-line {
+    height: 50px;
+    width: 1px;
+    background-color: #c0c0c0;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* Palabras de referencia a la pagina */
+.navbar-nav .nav-item .nav-link {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: white;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+/* Estilo del cursor encima de la palabra */
+.navbar-nav .nav-item .nav-link:hover {
+    color: #264a5e;
+    background-color: white;
+    border-radius: 0;
+}
+
+/* Estilo del logo */
+.logo {
+    height: 50px;
+}
+
+/* Estrilo del boton principal (CONTACTANOS) */
+.btn-primary {
+    background-color: transparent;
+    border-color: white;
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+    border-radius: 0;
+}
+
+/* Estilo del cursor encima de CONTACTANOS */
+.btn-primary:hover {
+    background-color: white;
+    border-color: #264a5e;
+    color: #264a5e;
+}
+
+
+
+/* ==================== CONTÁCTANOS ==================== */
+
+
+
+/* Estilos generales del modal */
+#contactModal .modal-content {
+    padding: 15px 35px;
+}
+
+/* Estilos del título del modal */
+#contactModal .modal-title {
+    font-family: 'Constantia', sans-serif;
+    font-weight: normal;
+    color: #264a5e;
+}
+
+/* Estilos para las etiquetas (Nombre, Correo Electrónico, Mensaje) */
+#contactModal .form-label {
+    font-family: Arial, sans-serif;
+    font-weight: normal;
+    color: #264a5e;
+}
+
+/* Estilos para los campos de entrada (input y textarea) */
+#contactModal .form-control {
+    border-radius: 0;
+    font-family: Arial, sans-serif;
+    border-color: #264a5e;
+}
+
+/* Estilos específicos para el textarea (mensaje) */
+#contactModal #mensaje {
+    height: 130px;
+    resize: none; /* Evita que el textarea sea redimensionable */
+}
+
+/* Estilo del placeholder del textarea (Nombre,email,mensaje) */
+#contactModal #nombre::placeholder,
+#contactModal #email::placeholder,
+#contactModal #mensaje::placeholder {
+    color: #757575; /* Color gris */
+}
+
+/* Estilos del botón de enviar */
+#contactModal .btn {
+    background-color: #264a5e;
+    color: white;
+    font-family: Sylfaen, sans-serif;
+    font-weight: normal;
+    padding: 10px 45px;
+}
+
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! INDEX !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+
+/* ==================== HERO ==================== */
+
+
+
+/* Estilo principal de Hero */
+#hero {
+    background-image: url('../images/Mayakaan-Residences.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    color: white;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: -150px;
+}
+
+/* Estilo del contenedor Hero */
+#hero .container {
+    text-align: left;
+    max-width: 800px;
+    padding: 0 20px;
+    margin-left: 5%;
+}
+
+/* Estilo del h1 de hero (principal)*/
+#hero h1 {
+    font-family: 'Constantia', sans-serif;
+    font-size: 3rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+/* Estilo del texto secundario de hero */
+#hero p {
+    font-size: 1.2rem;
+    max-width: 450px;
+    margin-bottom: 20px;
+}
+
+/* Estilo del boton TOUR VIRTUAL */
+#hero .btn {
+    font-size: 1.2rem;
+    padding: 10px 30px;
+    border: 1px solid white;
+    border-radius: 0;
+    color: white;
+    background: transparent;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo del cursor encima de TOUR VIRTUAL */
+#hero .btn:hover {
+    background-color: white;
+    color: #007bff;
+}
+
+
+
+/* ==================== NOSOTROS ==================== */
+
+
+
+/* Estilo Pprincipal de Nosotros */
+#nosotros {
+    position: relative;
+    background-color: transparent;
+    overflow: hidden;
+    z-index: 2; /* Asegura que la sección Nosotros esté por encima de Hero */
+    margin-top: -150px; /* Ajusta este valor para superponer más la sección Nosotros */
+}
+
+/* Estilo del Rombo de Nosotros */
+#nosotros::before {
+    content: '';
+    position: absolute;
+    top: 12%;
+    left: -10%;
+    width: 120%;
+    height: 75%; 
+    background-color: #264a5e;
+    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
+    z-index: 1;
+}
+
+/* Estilo del contenedor principal */
+#nosotros .container {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Estilo de la imagen Nosotros */
+#nosotros .img-container img {
+    border-radius: 0;
+    z-index: 2;
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+}
+
+/* Estilo del contenedor del texto */
+#nosotros .text-container {
+    flex: 1;
+    color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+/* Estilo del titullo principal de Nosotros */
+#nosotros .text-container h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Estilo del texto secundario de Nosotros */
+#nosotros .text-container p {
+    font-family: 'Cyne', sans-serif;
+    line-height: 1.9;
+    margin-bottom: 15px;
+}
+
+/* Estilo del boton de NOSOTROS */
+#nosotros .text-container .btn {
+    font-size: 1.2rem;
+    padding: 10px 30px;
+    border-radius: 0;
+    text-transform: uppercase;
+}
+
+
+
+/* ==================== PROYECTO ==================== */
+
+
+
+/* Diseño del título */
+#proyecto h2 {
+    font-family: 'Marcellus', serif;
+    font-size: 2.5rem;
+    color: #264a5e;
+}
+
+/* Diseño del párrafo de descripción */
+#proyecto p {
+    font-family: 'Cyne', sans-serif;
+    font-size: 1.2rem;
+    color: #264a5e;
+}
+
+/* Contenedor de la imagen */
+#proyecto .image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilo de la imagen */
+#proyecto .image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+}
+
+/* Cuadro sobre la imagen */
+#proyecto .overlay-message {
+    font-family: 'Marcellus', serif;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 25%;
+    background-color: #bfb180;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1.5rem;
+    border-radius: 0;
+}
+
+
+
+/* ==================== AMENIDADES ==================== */
+
+
+
+/* Estilo principal de Amenidades */
+#amenidades {
+    position: relative;
+    background-color: transparent;
+    color: white;
+    overflow: hidden;
+    margin-top: 50px;
+}
+
+/* Estilo del titullo principal de Amenidades */
+#amenidades h2 {
+    font-size: 2.5rem;
+    margin-top: -50px;
+    position: relative;
+    z-index: 3;
+    font-family: 'Constantia', sans-serif;
+    font-size: 2.8rem; /* Reducido a 3rem */
+}
+
+/* Estilo del texto secundario de Amenidades */
+#amenidades p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: 'Cyne', sans-serif;
+    line-height: 1.5;
+    font-size: 1.2rem;
+    max-width: 600px;
+}
+
+/* Fondo romboide de Amenidades */
+#amenidades::before {
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: -10%;
+    width: 120%;
+    height: 85%;
+    background-color: #264a5e;
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+    z-index: 1;
+}
+
+/* Contenedor principal de Amenidades */
+#amenidades .container {
+    padding-top: 100px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Estilo de la informacion de las columnas */
+#amenidades ul li::before {
+    content: '■';
+    color: white;
+    margin-right: 0.5rem;
+}
+
+/* Estilo de la imagen porincipal */
+.image-large {
+    width: 100%;
+    height: 547px;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+/* Estilo de las imagenes secundarias */
+.image-small {
+    width: 100%;
+    height: 265px;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+/* Estilo del boton VER GALERIA */
+.ver-galeria-btn {
+    color: #264a5e;
+    border-color: #264a5e;
+    font-size: 1.2rem;
+    padding: 10px 30px;
+    background-color: white;
+    border-radius: 0;
+}
+
+/* ==================== FOOTER ==================== */
+
+/* Contenedor principal del footer */
+#footer {
+    position: relative;
+    color: white;
+}
+
+/* Imagen de fondo del footer */
+#footer .position-relative img {
+    height: 290px;
+    object-fit: cover;
+    width: 20%;
+}
+
+/* Capa semi-transparente encima de la imagen */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(38, 74, 94, 0.5);
+}
+
+/* Contenido del footer con fondo semitransparente */
+.footer-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(38, 74, 94, 0.8);
+    width: 100%;
+}
+
+/* Logo más pequeño */
+.footer-content img {
+    max-height: 45px;
+    margin-bottom: 1rem;
+}
+
+/* Estilo para el texto adicional */
+.footer-content p {
+    font-family: 'Constantia', sans-serif;
+    margin-bottom: 1rem;
+}
+
+/* Estilo para los iconos y texto de contacto */
+.contact-info .icon-circle {
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+/* Color de los iconos */
+.contact-info i {
+    color: white;
+}
+
+/* Separador entre los elementos del footer */
+hr.my-2 {
+    border-top: 1px solid white;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Estilo para el texto de derechos reservados */
+.footer-content p.mb-2 {
+    margin-bottom: 1rem;
+}
